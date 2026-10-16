@@ -1,0 +1,32 @@
+{
+  "enable": {
+    "description": "启用用户提示词",
+    "type": "bool",
+    "hint": "关闭后暂停设置和注入提示词；用户仍可查看或清除自己的设置。",
+    "default": true
+  },
+  "enable_whitelist": {
+    "description": "启用白名单",
+    "type": "bool",
+    "hint": "开启后仅白名单用户可以设置及使用个人提示词。空列表表示所有人均不可用，管理员也需加入。",
+    "default": false
+  },
+  "whitelist": {
+    "description": "白名单用户列表",
+    "type": "list",
+    "hint": "每项填写 /prompt 返回的完整用户标识，如 tg_bot:123456；也可填裸用户 ID，如 123456，允许所有平台同 ID 用户。",
+    "default": []
+  },
+  "enable_length_limit": {
+    "description": "启用提示词字数限制",
+    "type": "bool",
+    "hint": "限制用户设置的提示词长度，超长时拒绝保存。关闭后不限制长度。已有超长提示词也会暂停注入。",
+    "default": true
+  },
+  "max_prompt_length": {
+    "description": "提示词最大字数",
+    "type": "int",
+    "hint": "默认 1000。中文、英文字母、标点、内部空格和换行均计入字符数；不含命令及首尾空白。请填正整数，无效值回退到 1000。",
+    "default": 1000
+  }
+}

@@ -1,0 +1,12 @@
+name: astrbot_plugin_user_prompts
+display_name: 用户提示词
+short_desc: /prompt 后单独发送多行提示词，支持白名单及字数限制
+desc: |
+  每位用户发送 /prompt 后，再单独发送一条消息设置个人提示词。
+  支持多行文本、查看和清除，并拦截设置消息的 AI 回复。
+  提示词仅用于该用户在当前对话中的 AI 请求，开启新会话后不继承。
+  支持管理面板白名单开关、用户列表、字数限制开关与最大字数配置。
+version: 1.0.0
+author: xmlans
+repo: https://github.com/xmlans/astrbot_plugin_user_prompts
+astrbot_version: ">=4.0.0,<5"
